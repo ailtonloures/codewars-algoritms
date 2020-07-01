@@ -1,9 +1,15 @@
 <?php
 
-function toJadenCase(string $string)
+/**
+ * Tranforma todas as primeiras letras das palavras em maiúsculas
+ *
+ * @param string $string
+ * @return string
+ */
+function toJadenCase(string $string): string
 {
     $strSplited = explode(" ", $string);
-    $strMaped = array_map(fn($value) => ucfirst($value) , $strSplited);
+    $strMaped   = array_map(fn($value) => ucfirst($value), $strSplited);
     $strUcFirst = implode(" ", $strMaped);
 
     return $strUcFirst;

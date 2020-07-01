@@ -1,6 +1,12 @@
 <?php
 
-function kebabize($string)
+/**
+ * Transforma e separa a string em um "slug"
+ *
+ * @param string $string
+ * @return string
+ */
+function kebabize(string $string): string
 {
     $text = str_split(preg_replace('/[^a-zA-Z]/', '', $string));
 

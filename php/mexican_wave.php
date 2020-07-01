@@ -1,6 +1,12 @@
 <?php
 
-function wave($people)
+/**
+ * Cria uma onda com a palavra em um array
+ *
+ * @param string $people
+ * @return array
+ */
+function wave(string $people): array
 {
     $wave = [];
 

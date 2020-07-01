@@ -1,17 +1,30 @@
 <?php
 
-function DNA_strand(string $dna)
+/**
+ * Inverte os valores das bases nitrogenadas
+ *
+ * @param string $dna
+ * @return string
+ */
+function DNA_strand(string $dna): string
 {
-    $dnaSplited = str_split($dna);
-    $dnaFiltered = array_map(function($value) {
-        if ($value == "A")
+    $dnaSplited  = str_split($dna);
+    $dnaFiltered = array_map(function ($value) {
+        if ($value == "A") {
             $prop = "T";
-        if ($value == "T")
+        }
+
+        if ($value == "T") {
             $prop = "A";
-        if ($value == "G")
+        }
+
+        if ($value == "G") {
             $prop = "C";
-        if ($value == "C")
+        }
+
+        if ($value == "C") {
             $prop = "G";
+        }
 
         return $prop;
     }, $dnaSplited);

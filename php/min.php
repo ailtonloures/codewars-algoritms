@@ -1,6 +1,14 @@
 <?php
 
-function minValue(array $arr)
+/**
+ * Retorna o valor mínimo possível com todos os items do array
+ * 
+ * --> Não está funcionando corretamente
+ *
+ * @param array $arr
+ * @return integer
+ */
+function minValue(array $arr) : int
 {
     $uniqs = array_values(array_unique($arr));
 

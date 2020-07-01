@@ -1,6 +1,12 @@
 <?php
 
-function solution(string $str)
+/**
+ * Põe um "_" no final da string se o conjunto for ímpar, e retorna separado a cada 2 caracteres em um array
+ *
+ * @param string $str
+ * @return array
+ */
+function solution(string $str): array
 {
     $splited = str_split($str, 2);
     $values  = array_map(function ($value) {
@@ -11,7 +17,7 @@ function solution(string $str)
         return $value;
     }, $splited);
 
-    return str_split(implode("", $values), 2);
+    return $values;
 }
 
 solution('abcde');

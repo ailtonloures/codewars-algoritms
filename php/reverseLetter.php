@@ -1,6 +1,12 @@
 <?php
 
-function reverseLetter(string $str)
+/**
+ * Inverte qualquer tipo de string retirando todos os caracteres especiais e números
+ *
+ * @param string $str
+ * @return string
+ */
+function reverseLetter(string $str): string
 {
     return strrev(preg_replace('/[^a-z]/', '', $str));
 }
