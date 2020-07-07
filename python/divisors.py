@@ -12,5 +12,4 @@ def divisors(integer):
 
     return arrDivisors
 
-
 divisors(13)
